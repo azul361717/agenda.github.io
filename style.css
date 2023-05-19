@@ -1,6 +1,12 @@
 body {
+    transition: 0.5s;
     background-color: gray;
     font-family: 'Kosugi Maru', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 .container {
     position: relative;
@@ -42,26 +48,30 @@ body {
 @keyframes edit {
     0%
     {
-        transform: translateY(-5mm);
+        transform: translateY(-2cm);
     }
+}
+
+.wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
 }
 
 .main_text
 {
     text-align: center;
     color: white;
+    transform: translateY(-1.5cm);
     font-size: 60px;
     animation: edit 0.5s;
 }
 
 .main_container {
     font-family: 'Quicksand', sans-serif;
-    position: absolute;
-    top: 56%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 27cm;
-    height: 16.5cm;
+    width: calc(32vmin * 4);
+    height: calc(19vmin * 4);
     padding: 8px;
     border-radius: 20px;
     background-color: white;
@@ -73,16 +83,17 @@ body {
     margin: 8px;
     border-radius: 20px;
     background-color: rgb(156, 156, 229);
-    width: 8cm;
-    height: 5cm;
+    width: calc(10vmin * 4);
+    height: calc(5.3vmin * 4);
     border-radius: 33px;
     background: #919191;
     box-shadow:  20px 20px 40px #4e4c4c;
 }
 .math h1{
     margin-left: 10px;
+    font-size: 26px;
 }
 .math p{
     margin-left: 13px;
-    font-size: 25px;
+    font-size: 19px;
 }
