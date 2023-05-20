@@ -69,23 +69,27 @@ body {
 }
 
 .main_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Quicksand', sans-serif;
     width: calc(32vmin * 4);
     height: calc(19vmin * 4);
     padding: 8px;
     border-radius: 20px;
     background-color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
+    display:flex;
+    flex-direction: column;
 }
+
 
 .math {
     margin: 8px;
-    border-radius: 20px;
     background-color: rgb(156, 156, 229);
     width: calc(10vmin * 4);
     height: calc(5.3vmin * 4);
-    border-radius: 33px;
+    border-radius: 15px;
     background: #919191;
     box-shadow:  20px 20px 40px #4e4c4c;
 }
@@ -96,4 +100,49 @@ body {
 .math p{
     margin-left: 13px;
     font-size: 19px;
+}
+
+@media screen and (max-width: 600px) {
+.main_text
+{
+    text-align: center;
+    color: white;
+    transform: translateY(-1.5cm);
+    font-size: 60px;
+    animation: edit 0.5s;
+}
+
+.main_container {
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: calc(24vmin * 4);
+    height: calc(25vmin * 4);
+    padding: 8px;
+    border-radius: 20px;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.math {
+    margin: 8px;
+    background-color: rgb(156, 156, 229);
+    width: calc(10vmin * 4);
+    height: calc(5.3vmin * 4);
+    border-radius: 15px;
+    background: #919191;
+    box-shadow:  20px 20px 40px #4e4c4c;
+}
+.math h1{
+    margin-left: 10px;
+    font-size: 26px;
+}
+.math p{
+    margin-left: 13px;
+    font-size: 19px;
+}
 }
